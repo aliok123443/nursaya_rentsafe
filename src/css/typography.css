@@ -1,0 +1,83 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  background: var(--page-glow);
+  font-variant-numeric: tabular-nums;
+}
+
+.mono {
+  font-family: var(--sans);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+  color: var(--ink);
+}
+
+h1 {
+  font-size: var(--type-display);
+}
+
+h2 {
+  font-size: var(--type-heading);
+}
+
+h3 {
+  font-size: var(--type-subheading);
+}
+
+p,
+li,
+label,
+input,
+select,
+button,
+a {
+  color: var(--ink);
+}
+
+p {
+  color: var(--muted);
+  line-height: var(--leading-copy);
+}
+
+small {
+  color: var(--muted);
+}
+
+.eyebrow {
+  color: var(--forest);
+  font-size: 0.72rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  letter-spacing: 0.12em;
+}
+
+.lead {
+  max-width: 48ch;
+  font-size: clamp(1.05rem, 1.35vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+::selection {
+  background: rgba(207, 232, 111, 0.35);
+}

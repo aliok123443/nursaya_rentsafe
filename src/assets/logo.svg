@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="RENTSAFE logo">
+  <defs>
+    <linearGradient id="rentsafeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C6F135"/>
+      <stop offset="100%" stop-color="#b8da2d"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="220" rx="42" fill="#0B0D0B"/>
+  <g transform="translate(22 22)">
+    <path d="M28 22H92C118 22 138 39 138 64C138 84 124 99 104 104L145 160H117L79 111H57V160H28V22ZM57 90H92C103 90 112 82 112 70C112 58 104 50 92 50H57V90Z" fill="url(#rentsafeGradient)"/>
+    <path d="M150 34H176V157H150V34Z" fill="#EAF3D5" opacity="0.8"/>
+    <path d="M150 34H176L136 77H110L150 34Z" fill="#C6F135" opacity="0.9"/>
+    <path d="M150 120H176L136 160H110L150 120Z" fill="#C6F135" opacity="0.8"/>
+  </g>
+</svg>

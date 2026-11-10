@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="RENTSAFE — жалға берушіге арналған құқықтық нұсқаулық, құжаттар және салықтық міндеттер."
+    />
+    <title>RENTSAFE</title>
+    <link rel="icon" type="image/svg+xml" href="src/assets/logo.svg?v=20261109" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/reset.css?v=20261109.8" />
+    <link rel="stylesheet" href="src/css/variables.css?v=20261109.8" />
+    <link rel="stylesheet" href="src/css/typography.css?v=20261109.8" />
+    <link rel="stylesheet" href="src/css/layout.css?v=20261109.8" />
+    <link rel="stylesheet" href="src/css/components.css?v=20261109.8" />
+    <link rel="stylesheet" href="src/css/responsive.css?v=20261109.8" />
+    <link rel="stylesheet" href="src/css/accessibility.css?v=20261109.8" />
+  </head>
+  <body>
+    <div class="noise-layer" aria-hidden="true"></div>
+    <div class="grid-glow" aria-hidden="true"></div>
+
+    <header class="floating-nav" aria-label="Негізгі навигация" data-i18n-aria-label="nav.aria">
+      <a class="brand" href="#home" aria-label="RENTSAFE" data-i18n-aria-label="brand.aria">
+        <img src="src/assets/logo.svg" alt="RENTSAFE логотипі" />
+        <span>RENTSAFE</span>
+      </a>
+
+      <nav id="primary-navigation" class="nav-menu" aria-label="Бөлімдер" data-i18n-aria-label="nav.sections">
+        <a href="#home" class="nav-link active" data-i18n="nav.home">Басты</a>
+        <a href="#prep" class="nav-link" data-i18n="nav.prep">Дайындық</a>
+        <a href="#documents" class="nav-link" data-i18n="nav.documents">Құжаттар</a>
+        <a href="#tax" class="nav-link" data-i18n="nav.tax">Салық</a>
+        <a href="#checklist" class="nav-link" data-i18n="nav.checklist">Чек-лист</a>
+        <a href="#dashboard" class="nav-link" data-i18n="nav.dashboard">Панель</a>
+      </nav>
+
+      <div class="nav-actions">
+        <label class="language-picker">
+          <span class="sr-only" data-i18n="language.label">Тіл</span>
+          <select id="language-select" aria-label="Тіл" data-i18n-aria-label="language.label">
+            <option value="kk">KZ</option>
+            <option value="ru">RU</option>
+            <option value="en">EN</option>
+          </select>
+        </label>
+        <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Мәзірді ашу" data-i18n-aria-label="nav.openMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <main>
+      <section id="home" class="section hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow mono" data-i18n="hero.eyebrow">ЖАЛҒА БЕРУШІГЕ АРНАЛҒАН КЕШЕНДІ ӘДІС</p>
+          <h1 data-i18n="hero.title">
+            Пәтер жалдауды <span>сенімді бастаңыз</span>
+          </h1>
+          <p class="lead" data-i18n="hero.lead">
+            Жалға берушіге арналған құқықтық нұсқаулық, құжаттар және салықтық міндеттер.
+          </p>
+          <div class="hero-actions">
+            <a href="#checklist" class="primary-btn" data-i18n="hero.cta">Чек-листі бастау</a>
+            <a href="#tax" class="secondary-btn" data-i18n="hero.secondary">Салық модулі</a>
+          </div>
+          <ul class="stat-strip">
+            <li><strong>01</strong><span data-i18n="hero.statPrep">Құқықтық дайындық</span></li>
+            <li><strong>02</strong><span data-i18n="hero.statDocs">Құжаттама</span></li>
+            <li><strong>03</strong><span data-i18n="hero.statTax">Салық</span></li>
+          </ul>
+        </div>
+
+        <aside class="hero-visual reveal">
+          <div class="product-preview" aria-label="Чек-листтің нақты көрінісі">
+            <header class="product-preview-header">
+              <span class="product-mark" aria-hidden="true">R</span>
+              <div>
+                <strong>Жалдау чек-листі</strong>
+                <small>Дайындықты бір жерден бақылаңыз</small>
+              </div>
+            </header>
+            <div class="product-preview-progress">
+              <div><span>Орындалған тапсырмалар</span><strong id="preview-progress-count">0/24</strong></div>
+              <div class="progress-track" role="progressbar" aria-label="Чек-листтің орындалуы" aria-valuemin="0" aria-valuemax="24" aria-valuenow="0">
+                <span id="preview-progress-bar"></span>
+              </div>
+            </div>
+            <div id="product-preview-list" class="product-preview-list"></div>
+            <a class="preview-link" href="#checklist">
+              <span>Толық чек-листті ашу</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5" /></svg>
+            </a>
+          </div>
+        </aside>
+      </section>
+
+      <section id="prep" class="section">
+        <div class="section-heading reveal">
+          <p class="eyebrow mono">02 • ЖАЛҒА БЕРУГЕ ДАЙЫНДЫҚ</p>
+          <h2>Пәтерді жалға беруге дайындық</h2>
+        </div>
+
+        <div class="prep-layout reveal">
+          <div class="prep-text">
+            <p>
+              Жалға беруден бұрын үйдің дайындық деңгейі, құжаттар мен өзара келісімдердің дұрыстығы
+              құқықтық тәуекелді азайтады. Бұл кезеңде табыс, тұрғын үйдің күйі және ақпараттың нақтылығы
+              бірге қарастырылады.
+            </p>
+            <p class="info-note">Бұл жалпы практикалық шолу. Нақты құқықтар мен міндеттерді қолданыстағы заңнама және тараптар қол қойған шарт бойынша тексеріңіз.</p>
+          </div>
+
+          <div class="preparation-visual">
+            <ul class="preparation-points">
+              <li><strong>Құжаттар</strong><span>Меншік құқығы мен тіркеу деректерін салыстырыңыз.</span></li>
+              <li><strong>Тұрғын үй</strong><span>Жалға берілетін бөліктің жағдайы мен ақауларын тіркеңіз.</span></li>
+              <li><strong>Мүлік</strong><span>Берілетін жиһазды, техниканы және кілттерді тізімдеңіз.</span></li>
+              <li><strong>Коммуналдық төлемдер</strong><span>Төлем тәртібін шартта нақты келісіңіз.</span></li>
+              <li><strong>Кіру және байланыс</strong><span>Қол жеткізу мен хабарлау тәртібін алдын ала келісіңіз.</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="documents" class="section">
+        <div class="section-heading reveal">
+          <p class="eyebrow mono">03 • ҚҰЖАТТАР</p>
+          <h2>Интерактивті құжаттар галереясы</h2>
+        </div>
+
+        <div class="doc-grid reveal" id="doc-grid"></div>
+      </section>
+
+      <section id="contract" class="section">
+        <div class="section-heading reveal">
+          <p class="eyebrow mono">04 • ЖАЛДАУ ШАРТЫ</p>
+          <h2>Шарттың құрылымы</h2>
+        </div>
+
+        <div class="contract-structure reveal">
+          <article class="contract-card">
+            <span class="mono">01</span>
+            <h3>Тараптары</h3>
+            <p>Жалға беруші мен жалға алушының жеке басын куәландыратын, сәйкестендіру және мүлікті басқару құқықтарының егжей-тегжейлі анықталуы.</p>
+          </article>
+          <article class="contract-card">
+            <span class="mono">02</span>
+            <h3>Жалдау нысаны</h3>
+            <p>Пәтер, бөлме, техникалық ресурстар, үй-жайлардың сипаттамасы, қауіпсіздік және пайдалануға ұсыну жағдайлары.</p>
+          </article>
+          <article class="contract-card">
+            <span class="mono">03</span>
+            <h3>Жалдау ақысы</h3>
+            <p>Сіздің тәсіліңіз, төлем тәртібі, дербес шот, кешіктірілген төлемдерге қатысты процестер мен ескертулер.</p>
+          </article>
+          <article class="contract-card">
+            <span class="mono">04</span>
+            <h3>Коммуналдық төлемдер</h3>
+            <p>Әкімшілік, қызметтер, су, электр, газ, интернет, тараптардың міндеттемелері мен есептеу механизмі.</p>
+          </article>
+          <article class="contract-card">
+            <span class="mono">05</span>
+            <h3>Мерзімі</h3>
+            <p>Шарт басталатын күн, аяқталатын күн, автоматты жаңарту, мерзімін ұзарту, мерзімінен бұрын тоқтату.</p>
+          </article>
+          <article class="contract-card">
+            <span class="mono">06</span>
+            <h3>Тараптардың құқықтары</h3>
+            <p>Пайдалы қосымшалар, құқықтар, талаптар, әкімшілік процестер, даулардың шешілуі мен күдіктер.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="rights" class="section rights-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow mono">05 • ҚҰҚЫҚТАР МЕН МІНДЕТТЕР</p>
+          <h2>Жалға берушінің құқықтары мен міндеттері</h2>
+        </div>
+
+        <div class="compare-grid reveal">
+          <article class="compare-panel">
+            <h3>ЖАЛҒА БЕРУШІНІҢ ҚҰҚЫҚТАРЫ</h3>
+            <ul class="compare-list" id="rights-list"></ul>
+          </article>
+          <article class="compare-panel obligations">
+            <h3>ЖАЛҒА БЕРУШІНІҢ МІНДЕТТЕРІ</h3>
+            <ul class="compare-list" id="duties-list"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="handover" class="section handover-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow mono">06 • ҚАБЫЛДАУ-ТАПСЫРУ АКТІСІ</p>
+          <h2>Қабылдау-тапсыру актісі</h2>
+        </div>
+
+        <div class="handover-layout reveal">
+          <div class="handover-sidebar">
+            <div class="handover-metric">
+              <span class="mono">Бекітілген пункттер</span>
+              <strong id="handover-count">0/8</strong>
+            </div>
+            <ul class="handover-list" id="handover-list"></ul>
+          </div>
+          <div class="handover-visual">
+            <div class="handover-panel">
+              <div class="panel-header mono">Актіде тіркеуге арналған мәліметтер</div>
+              <div class="status-row"><span>Жиһаз</span><strong>Тізімге қосыңыз</strong></div>
+              <div class="status-row"><span>Техника</span><strong>Жағдайын белгілеңіз</strong></div>
+              <div class="status-row"><span>Кілттер</span><strong>Санын жазыңыз</strong></div>
+              <div class="status-row"><span>Есептегіш</span><strong>Көрсеткішін жазыңыз</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tax" class="section tax-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow mono">07 • САЛЫҚ МОДУЛІ</p>
+          <h2>Жалға беруден түскен табыс және салық</h2>
+        </div>
+
+        <div class="tax-wrapper reveal">
+          <div class="tax-overview">
+            <div class="tax-note">
+              <span class="mono">Негізгі ереже</span>
+              <p>Салық міндеттемелері жеке тұлғаның мәртебесі, табыс көзі, төлемдердің расталуы және қолданылатын режимге байланысты анықталады.</p>
+            </div>
+
+            <div class="tax-mode-tabs" id="tax-mode-tabs" aria-label="Салық режимдері"></div>
+            <div class="tax-article" id="tax-article"></div>
+          </div>
+
+          <div class="tax-calculator" aria-labelledby="calculator-title">
+            <h3 id="calculator-title">Салық калькуляторы</h3>
+            <form id="tax-form" novalidate>
+              <label>
+                Ай сайынғы жалдау ақысы
+                <input type="number" id="monthly-rent" min="0" step="1000" placeholder="300000" />
+              </label>
+              <label>
+                Жалдау мерзімі (айлар)
+                <input type="number" id="rent-period" min="1" step="1" placeholder="12" />
+              </label>
+              <label>
+                Қосымша табыс көзі
+                <input type="number" id="extra-income" min="0" step="1000" placeholder="0" />
+              </label>
+              <label>
+                Салық режимі
+                <select id="tax-mode-select">
+                  <option value="">Таңдау</option>
+                  <option value="individual">Жеке тұлға</option>
+                  <option value="ip">Жеке кәсіпкер</option>
+                  <option value="simplified">Жеңілдетілген режим</option>
+                </select>
+              </label>
+              <button type="submit" class="primary-btn">Есептеу</button>
+            </form>
+
+            <div class="calculator-results" id="tax-results" aria-live="polite">
+              <p>Салық сомасын анықтау үшін қосымша мәліметтер қажет.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tax-awareness reveal">
+          <div class="awareness-head">
+            <p class="eyebrow mono">САЛЫҚТЫҚ МІНДЕТТЕМЕЛЕРДІ ҰМЫТПАҢЫЗ</p>
+            <h3>Салықтық дайындықты тексеру</h3>
+          </div>
+
+          <div class="readiness-box" id="readiness-box">
+            <label><input type="checkbox" data-readiness="income" /> Табысымды есепке аламын.</label>
+            <label><input type="checkbox" data-readiness="payments" /> Төлемдерді растайтын құжаттарды сақтаймын.</label>
+            <label><input type="checkbox" data-readiness="mode" /> Салық режимінің талаптарын тексердім.</label>
+            <label><input type="checkbox" data-readiness="calendar" /> Қолданылатын салық мерзімдерін тексердім.</label>
+            <label><input type="checkbox" data-readiness="advice" /> Қажет болған жағдайда ресми түсіндірме аламын.</label>
+          </div>
+        </div>
+      </section>
+
+      <section id="checklist" class="section checklist-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow mono">08 • ЧЕК-ЛИСТ</p>
+          <h2>Жалға берушінің дайындық чек-листі</h2>
+        </div>
+
+        <p class="checklist-progress" aria-live="polite">
+          <span>Орындалған тапсырмалар</span>
+          <strong id="checklist-progress">0/24</strong>
+        </p>
+
+        <div class="checklist-controls reveal">
+          <div class="filter-group" role="group" aria-label="Чек-лист сүзгісі">
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">Барлығы</button>
+          <button class="filter-btn" type="button" data-filter="done" aria-pressed="false">Аяқталған</button>
+          <button class="filter-btn" type="button" data-filter="pending" aria-pressed="false">Жоспарда</button>
+          </div>
+          <label class="search-box">
+            <span class="mono">Іздеу</span>
+            <input id="checklist-search" type="search" placeholder="Пунктті іздеу" />
+          </label>
+          <button id="checklist-reset" class="filter-btn" type="button">Тазалау</button>
+        </div>
+
+        <div class="checklist-panel" id="checklist-panel"></div>
+      </section>
+
+      <section id="explorer" class="section">
+        <div class="section-heading reveal">
+          <p class="eyebrow mono">09 • LEGAL EXPLORER</p>
+          <h2>Құқықтық сұрақтар картасы</h2>
+        </div>
+
+        <div class="explorer-layout reveal" id="explorer-layout"></div>
+      </section>
+
+      <section id="scenarios" class="section scenario-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow mono">10 • SCENARIO EXPLORER</p>
+          <h2>Өмірлік сценарийлер</h2>
+        </div>
+
+        <div class="scenario-layout reveal">
+          <div class="scenario-list" id="scenario-list"></div>
+          <div class="scenario-detail" id="scenario-detail"></div>
+        </div>
+      </section>
+
+      <section id="glossary" class="section glossary-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow mono">11 • GLOSSARY</p>
+          <h2>Юридикалық терминдер словарьі</h2>
+        </div>
+
+        <div class="glossary-grid reveal" id="glossary-grid"></div>
+      </section>
+
+      <section id="documents-center" class="section">
+        <div class="section-heading reveal">
+          <p class="eyebrow mono">12 • DOCUMENT CENTER</p>
+          <h2>Құжаттар орталығы</h2>
+        </div>
+
+        <div class="doc-center-grid reveal" id="doc-center-grid"></div>
+      </section>
+
+      <section id="dashboard" class="section dashboard-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow mono">13 • PERSONAL PROGRESS</p>
+          <h2>Жеке дайындық панелі</h2>
+        </div>
+
+        <div class="dashboard-grid reveal" id="dashboard-grid"></div>
+      </section>
+    </main>
+
+    <div class="modal" id="info-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button type="button" class="modal-close" aria-label="Жабу">×</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <div class="brand footer-brand">
+            <img src="src/assets/logo.svg" alt="RENTSAFE логотипі" />
+            <span>RENTSAFE.</span>
+          </div>
+          <p>Материалдар ақпараттық сипатта және заңгерлік кеңесті алмастырмайды. Оқу жобасы.</p>
+        </div>
+
+        <nav class="footer-links" aria-label="Футер навигация">
+          <a href="#home">Басты</a>
+          <a href="#prep">Дайындық</a>
+          <a href="#documents">Құжаттар</a>
+          <a href="#tax">Салық</a>
+          <a href="#checklist">Чек-лист</a>
+        </nav>
+
+        <div class="footer-meta mono">
+          <p>Негізгі дереккөздер: adilet.zan.kz / kgd.gov.kz / egov.kz</p>
+          <p>Құқықтық ақпаратты тексеру күні: 2026-11-08</p>
+          <a href="#home" class="back-to-top">Жоғары</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="src/js/main.js?v=20261109.7"></script>
+  </body>
+</html>
