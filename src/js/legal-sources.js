@@ -49,7 +49,7 @@ export const legalDocuments = {
     },
     number: '№ 477-IV',
     date: '2011-07-22',
-    url: 'https://adilet.zan.kz/rus/docs/Z1100000477_'
+    url: 'https://adilet.zan.kz/rus/docs/Z1100000477'
   },
   registrationRules: {
     title: {
@@ -59,7 +59,7 @@ export const legalDocuments = {
     },
     number: 'Приказ № 677',
     date: '2024-09-09',
-    url: 'https://adilet.zan.kz/rus/docs/V2400035045_'
+    url: 'https://adilet.zan.kz/rus/docs/V2400035045'
   },
   tax: {
     title: {
@@ -69,7 +69,7 @@ export const legalDocuments = {
     },
     number: '№ 214-VIII',
     date: '2025-07-18',
-    url: 'https://adilet.zan.kz/rus/docs/K2500000214_'
+    url: 'https://adilet.zan.kz/rus/docs/K2500000214'
   },
   selfEmployed: {
     title: {
@@ -79,7 +79,7 @@ export const legalDocuments = {
     },
     number: 'Постановление № 994',
     date: '2025-11-21',
-    url: 'https://adilet.zan.kz/rus/docs/P2500000994_'
+    url: 'https://adilet.zan.kz/rus/docs/P2500000994'
   },
   personalData: {
     title: {
@@ -89,7 +89,7 @@ export const legalDocuments = {
     },
     number: '№ 94-V',
     date: '2013-05-21',
-    url: 'https://adilet.zan.kz/rus/docs/Z1300000094_'
+    url: 'https://adilet.zan.kz/rus/docs/Z1300000094'
   },
   consumer: {
     title: {
@@ -109,7 +109,7 @@ export const legalDocuments = {
     },
     number: '№ 235-V',
     date: '2014-07-05',
-    url: 'https://adilet.zan.kz/rus/docs/K1400000235_'
+    url: 'https://adilet.zan.kz/rus/docs/K1400000235'
   },
   immigrationRules: {
     title: {
@@ -129,7 +129,7 @@ export const legalDocuments = {
     },
     number: '',
     date: '1995-08-30',
-    url: 'https://adilet.zan.kz/rus/docs/K950001000_'
+    url: 'https://adilet.zan.kz/rus/docs/K2600000000'
   },
   kgdSelfEmployed: {
     title: {
