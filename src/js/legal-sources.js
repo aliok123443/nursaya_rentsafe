@@ -9,7 +9,7 @@ export const legalDocuments = {
     },
     number: '№ 268-XIII',
     date: '1994-12-27',
-    url: 'https://adilet.zan.kz/rus/docs/K940001000'
+    url: 'https://adilet.zan.kz/rus/docs/K940001000_'
   },
   civilSpecial: {
     title: {
@@ -19,7 +19,7 @@ export const legalDocuments = {
     },
     number: '№ 409',
     date: '1999-07-01',
-    url: 'https://adilet.zan.kz/rus/docs/K990000409'
+    url: 'https://adilet.zan.kz/rus/docs/K990000409_'
   },
   housing: {
     title: {
@@ -29,7 +29,7 @@ export const legalDocuments = {
     },
     number: '№ 94',
     date: '1997-04-16',
-    url: 'https://adilet.zan.kz/rus/docs/Z970000094'
+    url: 'https://adilet.zan.kz/rus/docs/Z970000094_'
   },
   registrationRights: {
     title: {
@@ -39,7 +39,7 @@ export const legalDocuments = {
     },
     number: '№ 310',
     date: '2007-07-26',
-    url: 'https://adilet.zan.kz/rus/docs/Z070000310'
+    url: 'https://adilet.zan.kz/rus/docs/Z070000310_'
   },
   migration: {
     title: {
@@ -49,7 +49,7 @@ export const legalDocuments = {
     },
     number: '№ 477-IV',
     date: '2011-07-22',
-    url: 'https://adilet.zan.kz/rus/docs/Z1100000477'
+    url: 'https://adilet.zan.kz/rus/docs/Z1100000477_'
   },
   registrationRules: {
     title: {
@@ -59,7 +59,7 @@ export const legalDocuments = {
     },
     number: 'Приказ № 677',
     date: '2024-09-09',
-    url: 'https://adilet.zan.kz/rus/docs/V2400035045'
+    url: 'https://adilet.zan.kz/rus/docs/V2400035045_'
   },
   tax: {
     title: {
@@ -69,7 +69,7 @@ export const legalDocuments = {
     },
     number: '№ 214-VIII',
     date: '2025-07-18',
-    url: 'https://adilet.zan.kz/rus/docs/K2500000214'
+    url: 'https://adilet.zan.kz/rus/docs/K2500000214_'
   },
   selfEmployed: {
     title: {
@@ -79,7 +79,7 @@ export const legalDocuments = {
     },
     number: 'Постановление № 994',
     date: '2025-11-21',
-    url: 'https://adilet.zan.kz/rus/docs/P2500000994'
+    url: 'https://adilet.zan.kz/rus/docs/P2500000994_'
   },
   personalData: {
     title: {
@@ -89,7 +89,7 @@ export const legalDocuments = {
     },
     number: '№ 94-V',
     date: '2013-05-21',
-    url: 'https://adilet.zan.kz/rus/docs/Z1300000094'
+    url: 'https://adilet.zan.kz/rus/docs/Z1300000094_'
   },
   consumer: {
     title: {
@@ -99,7 +99,7 @@ export const legalDocuments = {
     },
     number: '№ 274',
     date: '2010-05-04',
-    url: 'https://adilet.zan.kz/rus/docs/Z100000274'
+    url: 'https://adilet.zan.kz/rus/docs/Z100000274_'
   },
   administrative: {
     title: {
@@ -109,7 +109,7 @@ export const legalDocuments = {
     },
     number: '№ 235-V',
     date: '2014-07-05',
-    url: 'https://adilet.zan.kz/rus/docs/K1400000235'
+    url: 'https://adilet.zan.kz/rus/docs/K1400000235_'
   },
   immigrationRules: {
     title: {
